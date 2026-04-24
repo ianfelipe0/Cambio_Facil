@@ -71,25 +71,26 @@
                         <!-- Form Section -->
                         <div class="form-section">
                             <h3>Fazer cotação</h3>
-                            <form class="quote-form">
+                            <form id="quote-form" class="quote-form">
                                 <div class="form-group">
-                                    <label>Valor em BRL</label>
-                                    <input type="number" value="1000" placeholder="Digite o valor">
+                                    <label for="brl-amount">Valor em BRL</label>
+                                    <input id="brl-amount" type="number" value="1000" placeholder="Digite o valor" min="0" step="any">
                                 </div>
                                 <div class="form-group">
-                                    <label>Selecione a moeda</label>
-                                    <select>
-                                        <option>🇺🇸 USD - Dólar Americano</option>
-                                        <option>🇪🇺 EUR - Euro</option>
-                                        <option>🇬🇧 GBP - Libra Esterlina</option>
-                                        <option>🇦🇷 ARS - Peso Argentino</option>
-                                        <option>🇨🇳 CNY - Iene Chinês</option>
-                                        <option>🇦🇺 AUD - Dólar Australiano</option>
-                                        <option>🇨🇭 CHF - Franco Suíço</option>
-                                        <option>🇰🇼 KWD - Dinar do Kuwait</option>
+                                    <label for="currency-select">Selecione a moeda</label>
+                                    <select id="currency-select">
+                                        <option value="USD">🇺🇸 USD - Dólar Americano</option>
+                                        <option value="EUR">🇪🇺 EUR - Euro</option>
+                                        <option value="GBP">🇬🇧 GBP - Libra Esterlina</option>
+                                        <option value="ARS">🇦🇷 ARS - Peso Argentino</option>
+                                        <option value="CNY">🇨🇳 CNY - Iene Chinês</option>
+                                        <option value="AUD">🇦🇺 AUD - Dólar Australiano</option>
+                                        <option value="CHF">🇨🇭 CHF - Franco Suíço</option>
+                                        <option value="KWD">🇰🇼 KWD - Dinar do Kuwait</option>
                                     </select>
                                 </div>
-                                <button type="submit" class="btn btn-accent btn-full">Fazer cotação agora <span class="arrow">→</span></button>
+                                <button type="submit" id="quote-button" class="btn btn-accent btn-full">Fazer cotação agora <span class="arrow">→</span></button>
+                                <div id="quote-result" class="quote-result" aria-live="polite"></div>
                             </form>
                         </div>
                     </div>
